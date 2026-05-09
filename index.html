@@ -48,7 +48,9 @@ body{
 }
 
 .container{
+
     position:relative;
+
     z-index:2;
 
     margin-top:40px;
@@ -58,12 +60,9 @@ body{
 
 img{
 
-    width:240px;
-    height:360px;
+    width:260px;
 
-    object-fit:cover;
-
-    max-width:80%;
+    max-width:85%;
 
     border-radius:20px;
 
@@ -156,6 +155,7 @@ button{
 @keyframes fly{
 
     0%{
+
         transform:
         translateY(0)
         rotate(0deg);
@@ -164,6 +164,7 @@ button{
     }
 
     100%{
+
         transform:
         translateY(-110vh)
         rotate(360deg);
@@ -179,19 +180,22 @@ button{
 
 <div class="container">
 
-    <img id="img" src="./1.jpg">
+<img
+id="img"
+src="https://media.tenor.com/Wlp3d7n9Qx8AAAAi/cute-bunny.gif"
+>
 
-    <h1 id="text"></h1>
+<h1 id="text"></h1>
 
-    <p id="subText"></p>
+<p id="subText"></p>
 
-    <button id="yes">
-        Nhi chấp nhận
-    </button>
+<button id="yes">
+    Nhi chấp nhận
+</button>
 
-    <button id="no">
-        Hông bao giờ
-    </button>
+<button id="no">
+    Hông bao giờ
+</button>
 
 </div>
 
@@ -253,12 +257,17 @@ let noTexts = [
 
 let images = [
 
-"./1.jpg",
-"./2.jpg",
-"./3.jpg",
-"./4.jpg",
-"./3.jpg",
-"./2.jpg"
+"https://media.tenor.com/Wlp3d7n9Qx8AAAAi/cute-bunny.gif",
+
+"https://media.tenor.com/6kNzu2J9iVAAAAAi/bunny-cute.gif",
+
+"https://media.tenor.com/8fUQ8sK9bSAAAAAi/mochi-peach.gif",
+
+"https://media.tenor.com/t8qj4MZpK3MAAAAi/love-bear.gif",
+
+"https://media.tenor.com/8fUQ8sK9bSAAAAAi/mochi-peach.gif",
+
+"https://media.tenor.com/6kNzu2J9iVAAAAAi/bunny-cute.gif"
 
 ];
 
@@ -456,7 +465,8 @@ yes.onclick = ()=>{
 
     "( Nhi mặc váy vào đi tối Chiến đón đi ka ra oke 💕 )";
 
-    img.src = "./4.jpg";
+    img.src =
+    "https://media.tenor.com/t8qj4MZpK3MAAAAi/love-bear.gif";
 
     yes.style.display =
     "none";
