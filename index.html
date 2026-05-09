@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -206,8 +207,12 @@ src="https://media.tenor.com/49z1J9J0Z8AAAAAC/cat-cute.gif"
 
 </div>
 
+<!-- NHẠC -->
+
 <audio id="music" loop>
-    <source src="music.mp3">
+    <source
+    src="https://files.catbox.moe/6r3zqf.mp3"
+    type="audio/mpeg">
 </audio>
 
 <script>
@@ -262,7 +267,7 @@ let noTexts = [
 
 ];
 
-/* sticker mèo online */
+/* sticker mèo */
 
 let images = [
 
@@ -310,13 +315,7 @@ document.getElementById("img");
 let music =
 document.getElementById("music");
 
-text.innerText = texts[0];
-
-subText.innerText = subTexts[0];
-
-no.innerText = noTexts[0];
-
-/* bật nhạc */
+/* bật nhạc khi chạm */
 
 document.body.addEventListener(
 
@@ -400,6 +399,12 @@ function createSticker(){
 
 setInterval(createSticker,500);
 
+text.innerText = texts[0];
+
+subText.innerText = subTexts[0];
+
+no.innerText = noTexts[0];
+
 /* bấm KHÔNG */
 
 no.onclick = ()=>{
@@ -426,8 +431,6 @@ no.onclick = ()=>{
             img.style.opacity = 1;
 
         },200);
-
-        /* nút đồng ý to hơn nhiều */
 
         yes.style.fontSize =
         (24 + step*6) + "px";
