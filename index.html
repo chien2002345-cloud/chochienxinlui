@@ -52,27 +52,27 @@ body{
 
     z-index:2;
 
-    margin-top:30px;
+    margin-top:25px;
 
     padding:20px;
 }
 
 img{
 
-    width:280px;
+    width:300px;
 
-    height:320px;
+    height:340px;
 
     object-fit:cover;
 
     max-width:90%;
 
-    border-radius:20px;
+    border-radius:22px;
 
     margin-bottom:20px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.2);
+    0 10px 30px rgba(0,0,0,0.25);
 
     transition:0.4s;
 }
@@ -83,7 +83,7 @@ h1{
 
     color:#ff4d9d;
 
-    font-size:28px;
+    font-size:30px;
 
     margin-bottom:15px;
 
@@ -98,7 +98,7 @@ p{
 
     margin-bottom:20px;
 
-    font-size:18px;
+    font-size:19px;
 
     text-shadow:
     0 0 8px rgba(255,255,255,0.8);
@@ -106,13 +106,13 @@ p{
 
 button{
 
-    padding:14px 24px;
+    padding:16px 28px;
 
     border:none;
 
-    border-radius:14px;
+    border-radius:15px;
 
-    font-size:18px;
+    font-size:20px;
 
     margin:10px;
 
@@ -124,16 +124,20 @@ button{
     0 5px 15px rgba(0,0,0,0.15);
 }
 
+/* nút đồng ý lớn hơn */
+
 #yes{
 
     background:#ff4d6d;
 
     color:white;
+
+    font-size:24px;
 }
 
 #yes:hover{
 
-    transform:scale(1.08);
+    transform:scale(1.12);
 }
 
 #no{
@@ -185,7 +189,7 @@ button{
 
 <img
 id="img"
-src="./1.jpg"
+src="https://media.tenor.com/49z1J9J0Z8AAAAAC/cat-cute.gif"
 >
 
 <h1 id="text"></h1>
@@ -203,7 +207,7 @@ src="./1.jpg"
 </div>
 
 <audio id="music" loop>
-    <source src="./music.mp3">
+    <source src="music.mp3">
 </audio>
 
 <script>
@@ -258,27 +262,29 @@ let noTexts = [
 
 ];
 
+/* sticker mèo online */
+
 let images = [
 
-"./1.jpg",
+"https://media.tenor.com/49z1J9J0Z8AAAAAC/cat-cute.gif",
 
-"./2.jpg",
+"https://media.tenor.com/mjYh9xjv0JAAAAAC/cat-beg.gif",
 
-"./3.jpg",
+"https://media.tenor.com/q6cXj9Y0w4AAAAAC/crying-cat.gif",
 
-"./4.jpg",
+"https://media.tenor.com/2roX3uxz_68AAAAAC/cat-love.gif",
 
-"./3.jpg",
+"https://media.tenor.com/q6cXj9Y0w4AAAAAC/crying-cat.gif",
 
-"./2.jpg"
+"https://media.tenor.com/mjYh9xjv0JAAAAAC/cat-beg.gif"
 
 ];
 
 let stickers = [
 
-"🐰",
+"🐱",
 "💖",
-"🌸",
+"🐾",
 "🥺",
 "💕",
 "🎀",
@@ -421,8 +427,14 @@ no.onclick = ()=>{
 
         },200);
 
+        /* nút đồng ý to hơn nhiều */
+
         yes.style.fontSize =
-        (18 + step*4) + "px";
+        (24 + step*6) + "px";
+
+        yes.style.padding =
+        (16 + step*2) + "px " +
+        (28 + step*4) + "px";
 
         no.style.fontSize =
         Math.max(10,18-step*2) + "px";
@@ -469,15 +481,13 @@ yes.onclick = ()=>{
     "( Nhi mặc váy vào đi tối Chiến đón đi ka ra oke 💕 )";
 
     img.src =
-    "./4.jpg";
+    "https://media.tenor.com/2roX3uxz_68AAAAAC/cat-love.gif";
 
     yes.style.display =
     "none";
 
     no.style.display =
     "none";
-
-    /* pháo tim */
 
     for(let i=0;i<40;i++){
 
