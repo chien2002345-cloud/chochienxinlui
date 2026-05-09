@@ -1,3 +1,4 @@
+```html id="s0q4pv"
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -49,28 +50,26 @@ body{
 .container{
 
     position:relative;
+
     z-index:2;
 
-    margin-top:25px;
+    margin-top:40px;
 
     padding:20px;
 }
 
 img{
 
-    width:300px;
-    height:340px;
+    width:260px;
 
-    object-fit:cover;
+    max-width:85%;
 
-    max-width:90%;
-
-    border-radius:22px;
+    border-radius:20px;
 
     margin-bottom:20px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.25);
+    0 10px 30px rgba(0,0,0,0.2);
 
     transition:0.4s;
 }
@@ -81,7 +80,7 @@ h1{
 
     color:#ff4d9d;
 
-    font-size:30px;
+    font-size:28px;
 
     margin-bottom:15px;
 
@@ -96,7 +95,7 @@ p{
 
     margin-bottom:20px;
 
-    font-size:19px;
+    font-size:18px;
 
     text-shadow:
     0 0 8px rgba(255,255,255,0.8);
@@ -104,13 +103,13 @@ p{
 
 button{
 
-    padding:16px 28px;
+    padding:14px 24px;
 
     border:none;
 
-    border-radius:15px;
+    border-radius:14px;
 
-    font-size:20px;
+    font-size:18px;
 
     margin:10px;
 
@@ -122,20 +121,16 @@ button{
     0 5px 15px rgba(0,0,0,0.15);
 }
 
-/* nút đồng ý lớn hơn */
-
 #yes{
 
     background:#ff4d6d;
 
     color:white;
-
-    font-size:24px;
 }
 
 #yes:hover{
 
-    transform:scale(1.12);
+    transform:scale(1.08);
 }
 
 #no{
@@ -187,7 +182,7 @@ button{
 
 <img
 id="img"
-src="https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif"
+src="https://media.tenor.com/Wlp3d7n9Qx8AAAAi/cute-bunny.gif"
 >
 
 <h1 id="text"></h1>
@@ -204,12 +199,8 @@ src="https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif"
 
 </div>
 
-<!-- NHẠC -->
-
 <audio id="music" loop>
-    <source
-    src="https://files.catbox.moe/6r3zqf.mp3"
-    type="audio/mpeg">
+    <source src="./music.mp3">
 </audio>
 
 <script>
@@ -264,31 +255,30 @@ let noTexts = [
 
 ];
 
-/* tất cả đổi thành mèo hôn */
-
 let images = [
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif",
+"https://media.tenor.com/Wlp3d7n9Qx8AAAAi/cute-bunny.gif",
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif",
+"https://media.tenor.com/6kNzu2J9iVAAAAAi/bunny-cute.gif",
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif",
+"https://media.tenor.com/8fUQ8sK9bSAAAAAi/mochi-peach.gif",
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif",
+"https://media.tenor.com/t8qj4MZpK3MAAAAi/love-bear.gif",
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif",
+"https://media.tenor.com/8fUQ8sK9bSAAAAAi/mochi-peach.gif",
 
-"https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif"
+"https://media.tenor.com/6kNzu2J9iVAAAAAi/bunny-cute.gif"
 
 ];
 
 let stickers = [
 
-"🐱",
+"🐰",
 "💖",
-"💋",
-"💕",
+"🌸",
 "🥺",
+"💕",
+"🎀",
 "✨"
 
 ];
@@ -311,7 +301,13 @@ document.getElementById("img");
 let music =
 document.getElementById("music");
 
-/* bật nhạc khi chạm */
+text.innerText = texts[0];
+
+subText.innerText = subTexts[0];
+
+no.innerText = noTexts[0];
+
+/* bật nhạc */
 
 document.body.addEventListener(
 
@@ -395,12 +391,6 @@ function createSticker(){
 
 setInterval(createSticker,500);
 
-text.innerText = texts[0];
-
-subText.innerText = subTexts[0];
-
-no.innerText = noTexts[0];
-
 /* bấm KHÔNG */
 
 no.onclick = ()=>{
@@ -429,11 +419,7 @@ no.onclick = ()=>{
         },200);
 
         yes.style.fontSize =
-        (24 + step*6) + "px";
-
-        yes.style.padding =
-        (16 + step*2) + "px " +
-        (28 + step*4) + "px";
+        (18 + step*4) + "px";
 
         no.style.fontSize =
         Math.max(10,18-step*2) + "px";
@@ -473,20 +459,22 @@ yes.onclick = ()=>{
 
     text.innerText =
 
-    "Nhi đồng ý rồi nhá 💖 Giờ thì phải nhắn tin với Chiến đó nghen 🥰";
+    "Nhi đồng ý rồi nhá 💖 Giờ thì phải nhắn tin với Chiến đó nghen, có chi phải nói với Chiến nghen 🥰";
 
     subText.innerText =
 
     "( Nhi mặc váy vào đi tối Chiến đón đi ka ra oke 💕 )";
 
     img.src =
-    "https://media.tenor.com/8tFzD7mZ0X8AAAAi/cat-kiss.gif";
+    "https://media.tenor.com/t8qj4MZpK3MAAAAi/love-bear.gif";
 
     yes.style.display =
     "none";
 
     no.style.display =
     "none";
+
+    /* pháo tim */
 
     for(let i=0;i<40;i++){
 
@@ -498,3 +486,4 @@ yes.onclick = ()=>{
 
 </body>
 </html>
+```
